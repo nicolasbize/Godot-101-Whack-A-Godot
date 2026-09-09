@@ -29,3 +29,11 @@ offset_right = 151.0
 offset_bottom = 120.0
 theme_override_font_sizes/font_size = 30
 text = "Time: 10"
+
+[node name="Timer" type="Timer" parent="." unique_id=733080012]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="pressed" from="Button" to="." method="increase_score"]
+[connection signal="timeout" from="Timer" to="." method="game_over"]
